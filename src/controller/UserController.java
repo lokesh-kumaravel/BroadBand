@@ -49,13 +49,15 @@ public class UserController {
         }
     }
 
-    public void findUserById(int id) {
+    public User findUserById(int id) {
         for (User user : users) {
             if (user.getId() == id) {
                 userView.displayUser(user);
-                return;
+                return user;
             }
         }
         userView.displayMessage("User not found!");
+        return null;
     }
+
 }

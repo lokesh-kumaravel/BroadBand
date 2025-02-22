@@ -8,6 +8,15 @@ public class ServicePlan {
     private int price;
     private String planDuration;
 
+    public ServicePlan(int planId, String planName, int dataSpeed, String dataLimit, int price, String planDuration) {
+        this.planId = planId;
+        this.planName = planName;
+        this.dataSpeed = dataSpeed;
+        this.dataLimit = dataLimit;
+        this.price = price;
+        this.planDuration = planDuration;
+    }
+
     public int getPlanId() {
         return planId;
     }
@@ -55,4 +64,17 @@ public class ServicePlan {
     public void setPlanDuration(String planDuration) {
         this.planDuration = planDuration;
     }
+
+    @Override
+    public String toString() {
+        return "ServicePlan{" +
+                "planId=" + planId +
+                ", planName='" + planName + '\'' +
+                ", dataSpeed=" + dataSpeed + " Mbps" +
+                ", dataLimit='" + dataLimit + '\'' +
+                ", price=" + price + " INR" +
+                ", planDuration='" + planDuration + '\'' +
+                '}';
+    }
+
 }
